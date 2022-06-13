@@ -15,6 +15,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   HStack,
+  Heading,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -31,39 +32,38 @@ export default function Header() {
   const { isOpen, onClose, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        // bg={useColorModeValue("white", "gray.800")}
+        // color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        py={{ base: 1 }}
+        px={{ base: 1 }}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <HStack spacing="5px">
-            <AiFillCode size={25} />
-
-            <Text
-              fontSize="2xl"
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={"heading"}
-              color={useColorModeValue("gray.800", "white")}
+          <HStack spacing="0px">
+            <AiFillCode size={24} />
+            <NextLink
+              href={{
+                pathname: "/",
+              }}
+              passHref
             >
-              <NextLink
-                href={{
-                  pathname: "/",
-                }}
-                passHref
-              >
-                <Link>
-                  <b>Learners Path</b>
-                </Link>
-              </NextLink>
-            </Text>
+              <Link>
+                <Text
+                  fontSize="2xl"
+                  textAlign={useBreakpointValue({ base: "center", md: "left" })}
+                  fontFamily={"heading"}
+                  color={useColorModeValue("gray.800", "white")}
+                >
+                  My&nbsp;Academy
+                </Text>
+              </Link>
+            </NextLink>
           </HStack>
         </Flex>
 
