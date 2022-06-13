@@ -1,0 +1,41 @@
+.cl-component.cl-sign-in {
+  padding: 10px !important;
+}
+
+.cl-component .cl-logo {
+  display: none !important;
+}
+
+.cl-component .cl-auth-form-header {
+  padding: 0em 0 0 0 !important;
+}
+
+.cl-component .cl-auth-form-header-logo {
+  min-height: 0px !important;
+}
+
+.cl-component {
+  --clerk-background-color: none;
+  --clerk-box-shadow: -1 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* span.I5LAUiZ_1LvjHChTQkwt.cl-label {
+  display: "none";
+}
+
+.I5LAUiZ_1LvjHChTQkwt {
+  display: none;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.25em;
+} */
+
+/* Sign Up Link */
+
+/* .cl-component .cl-auth-form-link {
+    display: none !important;
+  } */
+
+/* .cl-component {
+  --clerk-box-shadow: -1 2px 8px rgba(0, 0, 0, 0.2);
+} */
