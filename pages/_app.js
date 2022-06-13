@@ -4,6 +4,7 @@ import Footer from "../components/layouts/Footer";
 import theme from "../components/layouts/Theme";
 import { ClerkProvider } from "@clerk/nextjs";
 import "../clerk.css";
+import ProgressBar from "../components/Util/ProgressBar";
 
 function MyApp({ Component, pageProps }) {
   const customThemeOptions_dark = {
@@ -48,6 +49,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
+      <ProgressBar />
       <ClerkProvider {...pageProps}>
         <Header />
         <Component {...pageProps} />

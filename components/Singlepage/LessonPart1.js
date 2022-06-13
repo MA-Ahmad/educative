@@ -33,11 +33,11 @@ const LessonPart1 = () => (
       >
         <Box
           width={{ lg: "sm" }}
-          transform={{ base: "translateY(-50%)", lg: "none" }}
-          bg={{
-            base: useColorModeValue("red.50", "gray.700"),
-            lg: "transparent",
-          }}
+          // transform={{ base: "translateY(-50%)", lg: "none" }}
+          // bg={{
+          //   base: useColorModeValue("red.50", "gray.700"),
+          //   lg: "transparent",
+          // }}
           mx={{ base: "6", md: "8", lg: "0" }}
           px={{ base: "6", md: "8", lg: "0" }}
           py={{ base: "6", md: "8", lg: "12" }}
