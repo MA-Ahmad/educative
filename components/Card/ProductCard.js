@@ -50,7 +50,7 @@ const ProductCard = (props) => {
           <FavouriteButton
             position="absolute"
             top="4"
-            right="4"
+            left="4"
             aria-label={`Add ${name} to your favourites`}
           />
         </Box>
@@ -71,7 +71,13 @@ const ProductCard = (props) => {
           </Stack>
           <Stack spacing="2" direction={"row"}>
             <Avatar src="" size="sm" />
-            <Text> Trainer Name</Text>
+
+            <Text
+              fontWeight="medium"
+              color={useColorModeValue("gray.700", "gray.400")}
+            >
+              Trainer Name
+            </Text>
           </Stack>
 
           {/*_______________________________________________________________
@@ -98,13 +104,14 @@ const ProductCard = (props) => {
         {/*_______________________________________________________________
                                      Badges
          _________________________________________________________________*/}
+
         <Stack direction="row">
           <Badge>English</Badge>
           <Badge>Intermediate</Badge>
           <Badge>01H:30M</Badge>
         </Stack>
 
-        <Button colorScheme="blue">
+        <Button size="md" colorScheme="teal" variant={"solid"}>
           <NextLink
             href={{
               pathname: "/course/[slug]",
@@ -114,17 +121,9 @@ const ProductCard = (props) => {
             }}
             passHref
           >
-            <Link> Start Learning...</Link>
+            <Link sx={{ "text-decoration": "none" }}>Start Learning...</Link>
           </NextLink>
         </Button>
-
-        {/* <Link
-          textDecoration="underline"
-          fontWeight="medium"
-          color={useColorModeValue("gray.600", "gray.400")}
-        >
-          Quick shop
-        </Link> */}
       </Stack>
     </div>
   );
