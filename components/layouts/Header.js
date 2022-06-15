@@ -66,7 +66,6 @@ export default function Header() {
             </NextLink>
           </HStack>
         </Flex>
-
         <Stack
           flex={{ base: 1, md: 5 }}
           justify={"flex-end"}
@@ -77,6 +76,7 @@ export default function Header() {
             <DesktopNav />
           </Flex>
         </Stack>
+        <ColorModeSwitcher />
 
         <Flex
           // flex={{ base: 1, md: "auto" }}
@@ -92,7 +92,6 @@ export default function Header() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <ColorModeSwitcher />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
