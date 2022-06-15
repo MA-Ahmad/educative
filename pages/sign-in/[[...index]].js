@@ -7,7 +7,7 @@ const SignInPage = () => {
       <br />
       <br />
       <Center>
-        <Heading>SIgn In</Heading>
+        <Heading>SIgn In2</Heading>
         <br />
         <br />
       </Center>
