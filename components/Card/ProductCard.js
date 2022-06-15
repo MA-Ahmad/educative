@@ -70,7 +70,7 @@ const ProductCard = (props) => {
             <PriceTag price={price} currency="USD" />
           </Stack>
           <Stack spacing="2" direction={"row"}>
-            <Avatar src="https://bit.ly/broken-link" size="sm" />
+            <Avatar src="" size="sm" />
             <Text> Trainer Name</Text>
           </Stack>
 
@@ -100,6 +100,8 @@ const ProductCard = (props) => {
          _________________________________________________________________*/}
         <Stack direction="row">
           <Badge>English</Badge>
+          <Badge>Intermediate</Badge>
+          <Badge>01H:30M</Badge>
         </Stack>
 
         <Button colorScheme="blue">
