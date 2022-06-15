@@ -73,19 +73,19 @@ export const products = [
       "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
     images,
   },
-  // {
-  //   id: "4",
-  //   name: "Silve wolf",
-  //   currency: "GBP",
-  //   price: 199,
-  //   imageUrl:
-  //     "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80",
-  //   rating: 5,
-  //   ratingCount: 1,
-  //   description:
-  //     "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
-  //   images,
-  // },
+  {
+    id: "4",
+    name: "Silve wolf",
+    currency: "GBP",
+    price: 199,
+    imageUrl:
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80",
+    rating: 5,
+    ratingCount: 1,
+    description:
+      "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
+    images,
+  },
   // {
   //   id: "5",
   //   name: "Silve wolf",
