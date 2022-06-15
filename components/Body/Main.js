@@ -5,7 +5,6 @@ const Main = () => {
   return (
     <div>
       <Hero />
-
       <CardLayout />
     </div>
   );

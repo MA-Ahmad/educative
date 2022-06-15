@@ -24,7 +24,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import NextLink from "next/link";
+// import NextLink from "next/link";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { AiFillCode } from "react-icons/ai";
 
@@ -47,7 +47,7 @@ export default function Header() {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <HStack spacing="0px">
             <AiFillCode size={24} />
-            <NextLink
+            {/* <NextLink
               href={{
                 pathname: "/",
               }}
@@ -63,7 +63,7 @@ export default function Header() {
                   My&nbsp;Academy
                 </Text>
               </Link>
-            </NextLink>
+            </NextLink> */}
           </HStack>
         </Flex>
         <Stack
@@ -73,7 +73,7 @@ export default function Header() {
           spacing={2}
         >
           <Flex display={{ base: "none", md: "flex" }} ml={20}>
-            <DesktopNav />
+            {/* <DesktopNav /> */}
           </Flex>
         </Stack>
         <ColorModeSwitcher />
@@ -155,14 +155,14 @@ const MobileNavItem = ({ label, children, navigate_to }) => {
           textDecoration: "none",
         }}
       >
-        <NextLink
+        {/* <NextLink
           href={{
             pathname: navigate_to,
           }}
           passHref
         >
           <Link> {label} </Link>
-        </NextLink>
+        </NextLink> */}
       </Flex>
     </Stack>
   );
