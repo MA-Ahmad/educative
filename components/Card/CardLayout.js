@@ -1,30 +1,30 @@
-import { Box, SimpleGrid, Heading, Text } from "@chakra-ui/react";
-import * as React from "react";
-import { products } from "./data";
-import ProductCard from "./ProductCard";
-import ProductGrid from "./ProductGrid";
+import * as React from 'react'
+import { Box } from '@chakra-ui/react'
+import { courses } from './data'
+import CourseCard from './CourseCard'
+import CourseGrid from './CourseGrid'
 
 const CardLayout = () => (
   <Box
     maxW="7xl"
     mx="auto"
     px={{
-      base: "4",
-      md: "8",
-      lg: "12",
+      base: '4',
+      md: '8',
+      lg: '12',
     }}
     py={{
-      base: "4",
-      md: "8",
-      lg: "12",
+      base: '4',
+      md: '8',
+      lg: '12',
     }}
   >
-    <ProductGrid>
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+    <CourseGrid>
+      {courses.map((course) => (
+        <CourseCard key={course.id} course={course} />
       ))}
-    </ProductGrid>
+    </CourseGrid>
   </Box>
-);
+)
 
-export default CardLayout;
+export default CardLayout
