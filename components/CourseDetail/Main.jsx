@@ -7,11 +7,12 @@ import {
   BreadcrumbLink,
 } from '@chakra-ui/react'
 import { BiChevronRight } from 'react-icons/bi'
+import HeroSection from './HeroSection'
 import LessonsSection from './LessonsSection'
 import FeaturesSection from './FeaturesSection'
-import OverviewSection from './OverviewSection'
 import SkillsSection from './SkillsSection'
-import HeroSection from './HeroSection'
+import OverviewSection from './OverviewSection'
+import ReviewsSection from './ReviewSection'
 
 const Main = () => {
   return (
@@ -23,6 +24,7 @@ const Main = () => {
         <FeaturesSection />
         <SkillsSection />
         <OverviewSection />
+        <ReviewsSection />
       </Stack>
     </Box>
   )
