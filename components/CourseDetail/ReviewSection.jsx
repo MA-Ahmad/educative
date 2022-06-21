@@ -8,6 +8,7 @@ import {
   Avatar,
   useColorModeValue,
 } from '@chakra-ui/react'
+import Pagination from './Pagination'
 
 const reviewData = [
   {
@@ -83,6 +84,7 @@ const Reviews = () => {
           )
         })}
       </Stack>
+      <Pagination />
     </Box>
   )
 }
