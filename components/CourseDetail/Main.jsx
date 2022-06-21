@@ -9,6 +9,8 @@ import {
 import { BiChevronRight } from 'react-icons/bi'
 import LessonsSection from './LessonsSection'
 import FeaturesSection from './FeaturesSection'
+import OverviewSection from './OverviewSection'
+import SkillsSection from './SkillsSection'
 import HeroSection from './HeroSection'
 
 const Main = () => {
@@ -19,6 +21,8 @@ const Main = () => {
       <Stack spacing={10} maxW="3xl">
         <LessonsSection />
         <FeaturesSection />
+        <SkillsSection />
+        <OverviewSection />
       </Stack>
     </Box>
   )
