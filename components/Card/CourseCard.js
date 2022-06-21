@@ -4,6 +4,7 @@ import {
   Image,
   Link,
   Icon,
+  Flex,
   Stack,
   Text,
   Avatar,
@@ -20,6 +21,7 @@ import NextLink from 'next/link'
 import { FaStar } from 'react-icons/fa'
 import { BsClock, BsBarChartLine } from 'react-icons/bs'
 import { MdLanguage } from 'react-icons/md'
+import Badge from './Badge'
 
 const CourseCard = (props) => {
   const { course, rootProps } = props
@@ -99,11 +101,11 @@ const CourseCard = (props) => {
         </Stack>
 
         {/*  Badges */}
-        <Stack direction="row" justifyContent="center">
-          <CourseBadge icon={MdLanguage} data="English" size="sm" />
-          <CourseBadge icon={BsBarChartLine} data="Intermediate" size="sm" />
-          <CourseBadge icon={BsClock} data="01H:30M" size="sm" />
-        </Stack>
+        <Flex direction="row" justifyContent="center" mt={2} flexWrap="wrap">
+          <Badge icon={MdLanguage} data="English" size="sm" />
+          <Badge icon={BsBarChartLine} data="Intermediate" size="sm" />
+          <Badge icon={BsClock} data="01H:30M" size="sm" />
+        </Flex>
 
         <Button size="md" colorScheme="teal" variant="solid">
           <NextLink
@@ -120,23 +122,6 @@ const CourseCard = (props) => {
         </Button>
       </Stack>
     </div>
-  )
-}
-
-const CourseBadge = (props) => {
-  return (
-    <HStack
-      p={1}
-      bg={useColorModeValue('gray.200', 'gray.700')}
-      color={useColorModeValue('black', 'white')}
-      rounded="md"
-      spacing={1}
-    >
-      <Icon as={props.icon} w={3} h={3} />
-      <Text fontSize="xs" lineHeight={1}>
-        {props.data}
-      </Text>
-    </HStack>
   )
 }
 
