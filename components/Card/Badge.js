@@ -3,7 +3,6 @@ import { Icon, Text, HStack, useColorModeValue } from '@chakra-ui/react'
 
 const Badge = (props) => {
   const getValues = (size) => {
-    // return size === 'md' ? [1.5, 5, 'sm'] : [1, 3, 'xs']
     return size === 'md'
       ? { padding: 1.5, boxSize: 5, fontSize: 'sm' }
       : { padding: 1, boxSize: 3, fontSize: 'xs' }

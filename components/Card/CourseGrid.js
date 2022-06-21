@@ -1,5 +1,5 @@
-import { SimpleGrid } from '@chakra-ui/react'
 import * as React from 'react'
+import { SimpleGrid } from '@chakra-ui/react'
 
 const CourseGrid = (props) => {
   const columns = React.useMemo(() => {

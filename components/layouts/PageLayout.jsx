@@ -1,6 +1,4 @@
 import { Box } from '@chakra-ui/react'
-import Header from './Header'
-import Footer from './Footer'
 
 function PageLayout({ children }) {
   return (

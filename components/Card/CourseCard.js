@@ -100,12 +100,9 @@ const CourseCard = (props) => {
 
         {/*  Badges */}
         <Stack direction="row" justifyContent="center">
-          <CourseBadge icon={MdLanguage} data="English" />
-          <CourseBadge icon={BsBarChartLine} data="Intermediate" />
-          <CourseBadge icon={BsClock} data="01H:30M" />
-          {/* <Badge>English</Badge>
-          <Badge>Intermediate</Badge>
-          <Badge>01H:30M</Badge> */}
+          <CourseBadge icon={MdLanguage} data="English" size="sm" />
+          <CourseBadge icon={BsBarChartLine} data="Intermediate" size="sm" />
+          <CourseBadge icon={BsClock} data="01H:30M" size="sm" />
         </Stack>
 
         <Button size="md" colorScheme="teal" variant="solid">

@@ -44,7 +44,7 @@ const HeroSection = () => {
             Trainer Name
           </Text>
         </Stack>
-        <Stack direction="row">
+        <Stack direction="row" alignItems="center">
           <HStack>
             <Icon as={FaStar} color="yellow.400" />
             <Text fontSize="sm" color={textColor}>
