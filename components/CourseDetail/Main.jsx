@@ -7,11 +7,13 @@ import {
   BreadcrumbLink,
 } from '@chakra-ui/react'
 import { BiChevronRight } from 'react-icons/bi'
+import HeroSection from './HeroSection'
 
 const Main = () => {
   return (
     <Box>
       <BreadcrumbSection />
+      <HeroSection />
     </Box>
   )
 }
