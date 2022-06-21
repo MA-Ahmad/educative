@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react'
+import Main from '../../../components/CourseDetail/Main'
+import PageLayout from '../../../components/layouts/PageLayout'
 
 const index = () => {
-  return <div>index</div>;
-};
+  return (
+    <PageLayout>
+      <Main />
+    </PageLayout>
+  )
+}
 
-export default index;
+export default index

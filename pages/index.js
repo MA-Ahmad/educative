@@ -1,25 +1,10 @@
-import Main from "../components/Body/Main";
+import Main from '../components/Body/Main'
+import PageLayout from '../components/layouts/PageLayout'
 
 export default function Home() {
   return (
-    <>
-      <br />
+    <PageLayout>
       <Main />
-    </>
-  );
+    </PageLayout>
+  )
 }
-
-// _______________________________________________________________________________________
-//                        Static Props
-// _______________________________________________________________________________________
-
-// export async function getStaticProps() {
-//   const res = await fetch("https://.../posts");
-//   const posts = await res.json();
-
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
