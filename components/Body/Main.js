@@ -1,13 +1,14 @@
-import Hero from "./Hero";
-import CardLayout from "../Card/CardLayout";
+import Hero from './Hero'
+import CardLayout from '../Card/CardLayout'
+import { Box } from '@chakra-ui/react'
 
 const Main = () => {
   return (
-    <div>
+    <Box>
       <Hero />
       <CardLayout />
-    </div>
-  );
-};
+    </Box>
+  )
+}
 
-export default Main;
+export default Main
