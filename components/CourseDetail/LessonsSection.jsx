@@ -13,6 +13,7 @@ import {
   AccordionButton,
   AccordionIcon,
   AccordionPanel,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { BsFillPlayCircleFill } from 'react-icons/bs'
 
@@ -40,6 +41,24 @@ const LessonsSection = () => {
       <chakra.h1 fontSize="3xl" fontWeight="bold" mb={4}>
         Lessons
       </chakra.h1>
+      <Stack direction="row" spacing={2} alignItems="center" mb={2}>
+        <chakra.h3
+          fontSize="lg"
+          fontWeight="bold"
+          display={{ base: 'none', md: 'block' }}
+        >
+          Course Content
+        </chakra.h3>
+        <VerticalDivider display={{ base: 'none', md: 'block' }} />
+        <chakra.h3 fontSize="lg" fontWeight="bold">
+          {lessons.length} Sections
+        </chakra.h3>
+        <VerticalDivider />
+        <chakra.h3 fontSize="lg" fontWeight="bold">
+          02H:30M
+        </chakra.h3>
+      </Stack>
+
       <Accordion defaultIndex={[0]} allowMultiple>
         {lessons.map((lesson, index) => (
           <AccordionItem key={index}>
@@ -87,6 +106,18 @@ const LessonsSection = () => {
         ))}
       </Accordion>
     </Box>
+  )
+}
+
+const VerticalDivider = (props) => {
+  return (
+    <Box
+      borderLeft="1px solid"
+      borderColor={useColorModeValue('gray.400', 'gray.600')}
+      mx={5}
+      height="20px"
+      {...props}
+    ></Box>
   )
 }
 
