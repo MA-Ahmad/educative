@@ -22,6 +22,7 @@ import { FaStar } from 'react-icons/fa'
 import { BsClock, BsBarChartLine } from 'react-icons/bs'
 import { MdLanguage } from 'react-icons/md'
 import Badge from './Badge'
+import VerticalDivider from '../shared/VerticalDivider'
 
 const CourseCard = (props) => {
   const { course, rootProps } = props
@@ -86,18 +87,25 @@ const CourseCard = (props) => {
           </Stack>
 
           {/* Star (total  Reviews) | Total enrollments */}
-          <HStack justifyContent="center" alignItems="center">
+          <Stack
+            direction={{ base: 'column', sm: 'row' }}
+            justifyContent="center"
+            alignItems="center"
+          >
             <HStack>
               <Icon as={FaStar} color="yellow.400" />
               <Text fontSize="sm" color={textColor}>
                 4.4 (12 Reviews)
               </Text>
             </HStack>
-            <chakra.span>|</chakra.span>
+            <VerticalDivider
+              height="15px"
+              display={{ base: 'none', sm: 'block' }}
+            />
             <Text fontSize="sm" color={textColor}>
               100 Enrollments
             </Text>
-          </HStack>
+          </Stack>
         </Stack>
 
         {/*  Badges */}

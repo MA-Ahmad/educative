@@ -20,6 +20,7 @@ import { BsClock, BsBarChartLine } from 'react-icons/bs'
 import { MdLanguage } from 'react-icons/md'
 import { FaPlay, FaStar } from 'react-icons/fa'
 import FormModal from './FormModal'
+import VerticalDivider from '../shared/VerticalDivider'
 
 const HeroSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -49,14 +50,21 @@ const HeroSection = () => {
               Trainer Name
             </Text>
           </Stack>
-          <Stack direction="row" alignItems="center">
+          <Stack
+            direction={{ base: 'column', sm: 'row' }}
+            alignItems={{ base: 'flex-start', sm: 'center' }}
+          >
             <HStack>
               <Icon as={FaStar} color="yellow.400" />
               <Text fontSize="sm" color={textColor}>
                 4.4 (12 Reviews)
               </Text>
             </HStack>
-            <chakra.span>|</chakra.span>
+            <VerticalDivider
+              height="15px"
+              display={{ base: 'none', sm: 'block' }}
+            />
+            {/* <chakra.span>|</chakra.span> */}
             <Text fontSize="sm" color={textColor}>
               100 Enrollments
             </Text>

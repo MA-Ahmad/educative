@@ -13,9 +13,9 @@ import {
   AccordionButton,
   AccordionIcon,
   AccordionPanel,
-  useColorModeValue,
 } from '@chakra-ui/react'
 import { BsFillPlayCircleFill } from 'react-icons/bs'
+import VerticalDivider from '../shared/VerticalDivider'
 
 const lessons = [
   {
@@ -68,16 +68,29 @@ const LessonsSection = () => {
                 <Box flex="1" textAlign="left" fontWeight="bold">
                   {lesson.title}
                 </Box>
-                {lesson.content.length}{' '}
-                {`Lesson${lesson.content.length > 1 ? 's' : ''}`} | 10 min
+                <Stack
+                  direction={{ base: 'column', sm: 'row' }}
+                  alignItems="center"
+                >
+                  <chakra.span>
+                    {lesson.content.length}{' '}
+                    {`Lesson${lesson.content.length > 1 ? 's' : ''}`}
+                  </chakra.span>
+                  <VerticalDivider
+                    height="15px"
+                    display={{ base: 'none', sm: 'block' }}
+                  />{' '}
+                  <chakra.span>10 min</chakra.span>
+                </Stack>
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <Stack direction="column">
+              <Stack direction="column" spacing={4}>
                 {lesson.content.map((content, index) => (
                   <Flex
+                    direction={{ base: 'column', sm: 'row' }}
                     justifyContent="space-between"
-                    alignItems="center"
+                    alignItems={{ base: 'flex-start', sm: 'center' }}
                     key={index}
                   >
                     <HStack>
@@ -91,11 +104,12 @@ const LessonsSection = () => {
                         {index + 1}) {content.title}
                       </chakra.h2>
                     </HStack>
-                    <HStack>
+                    <HStack mt={{ base: 2, sm: 0 }}>
                       <Button colorScheme="teal" size="xs">
                         Preview
                       </Button>
-                      <chakra.span>|</chakra.span>
+                      <VerticalDivider height="15px" />
+                      {/* <chakra.span>|</chakra.span> */}
                       <Text>5 min</Text>
                     </HStack>
                   </Flex>
@@ -106,18 +120,6 @@ const LessonsSection = () => {
         ))}
       </Accordion>
     </Box>
-  )
-}
-
-const VerticalDivider = (props) => {
-  return (
-    <Box
-      borderLeft="1px solid"
-      borderColor={useColorModeValue('gray.400', 'gray.600')}
-      mx={5}
-      height="20px"
-      {...props}
-    ></Box>
   )
 }
 
