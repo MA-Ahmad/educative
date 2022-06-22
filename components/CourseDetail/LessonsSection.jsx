@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { BsFillPlayCircleFill } from 'react-icons/bs'
 import VerticalDivider from '../shared/VerticalDivider'
+import NextLink from 'next/link'
 
 const LessonsSection = ({ lessons }) => {
   return (
@@ -88,10 +89,19 @@ const LessonsSection = ({ lessons }) => {
                     </HStack>
                     <HStack mt={{ base: 2, sm: 0 }}>
                       <Button colorScheme="teal" size="xs">
-                        Preview
+                        <NextLink
+                          href={{
+                            pathname: '/course/[slug]/lessons',
+                            query: {
+                              slug: 'react_js',
+                            },
+                          }}
+                          passHref
+                        >
+                          Preview
+                        </NextLink>
                       </Button>
                       <VerticalDivider height="15px" />
-                      {/* <chakra.span>|</chakra.span> */}
                       <Text>5 min</Text>
                     </HStack>
                   </Flex>

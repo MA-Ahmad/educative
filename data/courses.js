@@ -93,17 +93,20 @@ export const lessons = [
   {
     id: 1,
     title: 'section 1 - Introduction',
-    content: [{ title: 'Welcome to the course' }, { title: 'What is Reactjs' }],
+    content: [
+      { id: 1.1, title: 'Welcome to the course' },
+      { id: 1.2, title: 'What is Reactjs' },
+    ],
   },
   {
     id: 2,
     title: 'section 2 - Fundamentals',
-    content: [{ title: 'Fundamentals detail ' }],
+    content: [{ id: 2.1, title: 'Fundamentals detail ' }],
   },
   {
     id: 3,
     title: 'section 3 - Advance topics',
-    content: [{ title: 'What is usememo' }],
+    content: [{ id: 3.1, title: 'What is usememo' }],
   },
 ]
 
