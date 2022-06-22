@@ -13,6 +13,7 @@ import FeaturesSection from './FeaturesSection'
 import SkillsSection from './SkillsSection'
 import OverviewSection from './OverviewSection'
 import ReviewsSection from './ReviewSection'
+import { reviewData, ratingSummary } from '../../data/courses'
 
 const Main = () => {
   return (
@@ -24,7 +25,7 @@ const Main = () => {
         <FeaturesSection />
         <SkillsSection />
         <OverviewSection />
-        <ReviewsSection />
+        <ReviewsSection reviewData={reviewData} ratingSummary={ratingSummary} />
       </Stack>
     </Box>
   )

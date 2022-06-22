@@ -10,82 +10,108 @@ import {
 } from '@chakra-ui/react'
 import Pagination from './Pagination'
 
-const reviewData = [
-  {
-    avatarSrc:
-      'https://s.gravatar.com/avatar/4f9135f54df98fe894a9f9979d600a87?s=80',
-    review: `What a wonderful little cottage! More spacious and adorable than the What a wonderful little cottage! More spacious and adorable than the
-            pictures show. We never met our hosts and...`,
-    stars: 3,
-    userName: 'Ahmad',
-    dateTime: '2 months ago',
-  },
-  {
-    avatarSrc: '',
-    review: `What a wonderful little cottage! More spacious and adorable than the
-            pictures show. We never met our hosts, but we felt welcomed and...`,
-    stars: 4,
-    userName: 'Ali',
-    dateTime: '1 months ago',
-  },
-  {
-    avatarSrc: '',
-    review: `What a wonderful little cottage! More spacious and adorable than the
-            pictures show. We never met our hosts, but we felt welcomed and...`,
-    stars: 2,
-    userName: 'Zac',
-    dateTime: '4 months ago',
-  },
-]
-
-const Reviews = () => {
+const SimpleReview = ({ reviewData, ratingSummary }) => {
   return (
-    <Box>
-      <chakra.h1 fontSize="3xl" fontWeight="bold" mb={4}>
-        Recent Reviews
-      </chakra.h1>
-      <Stack direction="column" spacing={5} my={4}>
-        {reviewData.map((review, index) => {
-          return (
-            <Stack key={index} direction="column" maxW="2xl">
-              <HStack spacing={3}>
-                <Avatar
-                  size="md"
-                  name={review.userName}
-                  src={review.avatarSrc}
-                />
-                <Flex direction="column">
-                  <Text fontWeight="bold" fontSize="md">
-                    {review.userName}
-                  </Text>
-                  <Text fontWeight="light" fontSize="xs">
-                    {review.dateTime}
-                  </Text>
-                </Flex>
-              </HStack>
-              <Flex my={3} alignItems="center" justify="start">
-                {Array.from(Array(review.stars).keys()).map((id) => {
+    <>
+      <Box mb={8}>
+        <chakra.h1 fontSize="3xl" fontWeight="bold" mb={4}>
+          Rating Summary
+        </chakra.h1>
+        <Stack spacing={3}>
+          <Box>
+            <HStack spacing={3}>
+              <Flex alignItems="center" justify="start">
+                {Array.from(Array(4).keys()).map((id) => {
                   return <Star key={id} fillColor="#EACA4E" />
                 })}
-                {Array.from(Array(5 - review.stars).keys()).map((id) => {
+                {Array.from(Array(5 - 4).keys()).map((id) => {
                   return <Star key={id} fillColor="#e2e8f0" />
                 })}
               </Flex>
-              <Text
-                color={useColorModeValue('gray.700', 'gray.400')}
-                fontSize="0.87rem"
-                textAlign="left"
-                lineHeight="1.375"
-                fontWeight="300"
-              >
-                {review.review}
+              <Text fontWeight="bold" fontSize="lg">
+                4.0
               </Text>
-            </Stack>
-          )
-        })}
-      </Stack>
+            </HStack>
+            <Text fontWeight="bold" fontSize="md">
+              1355 ratings
+            </Text>
+          </Box>
+
+          <Stack direction="column" spacing={1}>
+            {ratingSummary.map((data) => {
+              return (
+                <HStack key={data.id} spacing={5}>
+                  <Text fontWeight="bold" fontSize="md">
+                    {data.rating}
+                  </Text>
+                  <Box w={{ base: '100%', md: '70%' }}>
+                    <Box
+                      w="100%"
+                      bg={useColorModeValue('gray.300', 'gray.600')}
+                      rounded="md"
+                    >
+                      <Box
+                        w={data.percentage}
+                        h={3}
+                        bg="yellow.400"
+                        rounded="md"
+                      ></Box>
+                    </Box>
+                  </Box>
+                  <Text fontWeight="bold" fontSize="md">
+                    {data.percentage}
+                  </Text>
+                </HStack>
+              )
+            })}
+          </Stack>
+        </Stack>
+      </Box>
+
+      <Box>
+        <chakra.h1 fontSize="3xl" fontWeight="bold" mb={4}>
+          Recent Reviews
+        </chakra.h1>
+        <Stack direction="column" spacing={5}>
+          {reviewData.map((review, index) => {
+            return (
+              <Box key={index} maxW="2xl">
+                <HStack spacing={3} mb={2}>
+                  <Avatar
+                    size="md"
+                    name={review.userName}
+                    src={review.avatarSrc}
+                  />
+                  <Stack direction="column" spacing={2}>
+                    <Text fontWeight="bold" fontSize="md">
+                      {review.userName}
+                    </Text>
+                    <Flex alignItems="center" justify="start">
+                      {Array.from(Array(review.stars).keys()).map((id) => {
+                        return <Star key={id} fillColor="#EACA4E" />
+                      })}
+                      {Array.from(Array(5 - review.stars).keys()).map((id) => {
+                        return <Star key={id} fillColor="#e2e8f0" />
+                      })}
+                    </Flex>
+                  </Stack>
+                </HStack>
+                <Text
+                  color={useColorModeValue('gray.700', 'gray.400')}
+                  fontSize="0.87rem"
+                  textAlign="left"
+                  lineHeight="1.375"
+                  fontWeight="300"
+                >
+                  {review.review}
+                </Text>
+              </Box>
+            )
+          })}
+        </Stack>
+      </Box>
       <Pagination />
-    </Box>
+    </>
   )
 }
 
@@ -106,4 +132,4 @@ const Star = ({ fillColor }) => {
   )
 }
 
-export default Reviews
+export default SimpleReview
