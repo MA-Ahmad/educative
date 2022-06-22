@@ -34,6 +34,7 @@ const HeroSection = () => {
         mb={10}
         w="100%"
       >
+        {/* Left Panel */}
         <Stack spacing={5} mt={5} w={{ base: '100%', md: '60%' }}>
           <chakra.h1 fontSize="3xl" fontWeight="bold">
             React JS Basics
@@ -69,14 +70,18 @@ const HeroSection = () => {
             <Badge icon={BsClock} data="01H:30M" size="md" />
           </Flex>
         </Stack>
+
+        {/* Right Panel */}
         <Stack spacing={2} w={{ base: '100%', md: '40%' }}>
           <Text
             fontWeight="medium"
+            fontSize="sm"
             color={textColor}
             noOfLines={2}
             textAlign="center"
           >
-            Text container
+            Hi, test you are enrolled on 29-May-2022 this will expire on
+            28-Jun-2022 click below to resume learning.
           </Text>
           <Button
             w={{ base: '100%', sm: 'auto' }}
