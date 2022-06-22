@@ -1,19 +1,17 @@
 import React from 'react'
 import { chakra, Box, Flex } from '@chakra-ui/react'
-import Badge from '../Card/Badge'
-import { BsClock, BsBarChartLine } from 'react-icons/bs'
-import { MdLanguage } from 'react-icons/md'
+import Badge from '../shared/Badge'
 
-const SkillsSection = () => {
+const SkillsSection = ({ skills }) => {
   return (
     <Box>
       <chakra.h1 fontSize="3xl" fontWeight="bold" mb={4}>
         Skills You Will Gain
       </chakra.h1>
       <Flex direction="row" mt={2} flexWrap="wrap">
-        <Badge icon={MdLanguage} data="English" size="md" />
-        <Badge icon={BsBarChartLine} data="Intermediate" size="md" />
-        <Badge icon={BsClock} data="01H:30M" size="md" />
+        {skills.map((skill, index) => (
+          <Badge data={skill} size="md" key={index} />
+        ))}
       </Flex>
     </Box>
   )

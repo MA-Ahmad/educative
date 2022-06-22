@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { courses } from './data'
+import { courses } from '../../data/courses'
 import CourseCard from './CourseCard'
 import CourseGrid from './CourseGrid'
 

@@ -18,11 +18,13 @@ const Badge = (props) => {
       m="2px"
       alignItems="center"
     >
-      <Icon
-        as={props.icon}
-        w={getValues(props.size).boxSize}
-        h={getValues(props.size).boxSize}
-      />
+      {props.icon && (
+        <Icon
+          as={props.icon}
+          w={getValues(props.size).boxSize}
+          h={getValues(props.size).boxSize}
+        />
+      )}
       <Text fontSize={getValues(props.size).fontSize} lineHeight={1}>
         {props.data}
       </Text>

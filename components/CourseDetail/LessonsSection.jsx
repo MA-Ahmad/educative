@@ -17,25 +17,7 @@ import {
 import { BsFillPlayCircleFill } from 'react-icons/bs'
 import VerticalDivider from '../shared/VerticalDivider'
 
-const lessons = [
-  {
-    id: 1,
-    title: 'section 1 - Introduction',
-    content: [{ title: 'Welcome to the course' }, { title: 'What is Reactjs' }],
-  },
-  {
-    id: 2,
-    title: 'section 2 - Fundamentals',
-    content: [{ title: 'Fundamentals detail ' }],
-  },
-  {
-    id: 3,
-    title: 'section 3 - Advance topics',
-    content: [{ title: 'What is usememo' }],
-  },
-]
-
-const LessonsSection = () => {
+const LessonsSection = ({ lessons }) => {
   return (
     <Box>
       <chakra.h1 fontSize="3xl" fontWeight="bold" mb={4}>

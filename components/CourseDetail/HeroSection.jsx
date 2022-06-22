@@ -15,14 +15,14 @@ import {
   useDisclosure,
   useColorModeValue,
 } from '@chakra-ui/react'
-import Badge from '../Card/Badge'
+import Badge from '../shared/Badge'
 import { BsClock, BsBarChartLine } from 'react-icons/bs'
 import { MdLanguage } from 'react-icons/md'
 import { FaPlay, FaStar } from 'react-icons/fa'
 import FormModal from './FormModal'
 import VerticalDivider from '../shared/VerticalDivider'
 
-const HeroSection = () => {
+const HeroSection = ({ course }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const textColor = useColorModeValue('gray.600', 'gray.400')
 
@@ -38,10 +38,10 @@ const HeroSection = () => {
         {/* Left Panel */}
         <Stack spacing={5} mt={5} w={{ base: '100%', md: '60%' }}>
           <chakra.h1 fontSize="3xl" fontWeight="bold">
-            React JS Basics
+            {course.name}
           </chakra.h1>
           <Text fontWeight="medium" color={textColor} noOfLines={2}>
-            React js is a javascript library and useful in building interfaces
+            {course.description}
           </Text>
           <Stack spacing="2" direction="row" alignItems="center">
             <Avatar src="" size="sm" />
@@ -64,7 +64,6 @@ const HeroSection = () => {
               height="15px"
               display={{ base: 'none', sm: 'block' }}
             />
-            {/* <chakra.span>|</chakra.span> */}
             <Text fontSize="sm" color={textColor}>
               100 Enrollments
             </Text>
@@ -74,8 +73,8 @@ const HeroSection = () => {
             <Badge icon={MdLanguage} data="English" size="md" />
             <Badge icon={BsBarChartLine} data="Intermediate" size="md" />
             <Badge icon={BsClock} data="01H:30M" size="md" />
-            <Badge icon={BsClock} data="01H:30M" size="md" />
-            <Badge icon={BsClock} data="01H:30M" size="md" />
+            <Badge icon={BsClock} data="TAG" size="md" />
+            <Badge icon={BsClock} data="TAG" size="md" />
           </Flex>
         </Stack>
 
