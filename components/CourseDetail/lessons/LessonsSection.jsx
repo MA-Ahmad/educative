@@ -4,7 +4,6 @@ import {
   Box,
   Icon,
   Text,
-  Button,
   Flex,
   Stack,
   HStack,
@@ -16,32 +15,20 @@ import {
   AccordionIcon,
   AccordionPanel,
 } from '@chakra-ui/react'
-import { BsFillPlayCircleFill } from 'react-icons/bs'
 import VerticalDivider from '../../shared/VerticalDivider'
-import NextLink from 'next/link'
+import { FaRegHandPointRight } from 'react-icons/fa'
+import { TiTickOutline } from 'react-icons/ti'
 
 const LessonsSection = ({ lessons }) => {
   const [selectedId, setSelectedId] = useState(0)
 
   return (
     <Box>
-      <Box mb={4}>
+      <Box mb={3}>
         <Stack direction="row" spacing={2} alignItems="center" mb={2}>
-          <Text
-            fontSize={{ base: 'sm', sm: 'md' }}
-            fontWeight="500"
-            textTransform="uppercase"
-          >
-            Current Lesson - 1
-          </Text>
+          <Heading icon={FaRegHandPointRight} text="Current Lesson - 1" />
           <VerticalDivider />
-          <Text
-            fontSize={{ base: 'sm', sm: 'md' }}
-            fontWeight="500"
-            textTransform="uppercase"
-          >
-            Completed Lessons - 2/2
-          </Text>
+          <Heading icon={TiTickOutline} text="Completed Lessons - 2/2" />
         </Stack>
         <Stack direction="row" alignItems="center" spacing={2}>
           <Progress value={20} size="xs" colorScheme="yellow" w="90%" />
@@ -106,6 +93,22 @@ const LessonsSection = ({ lessons }) => {
         ))}
       </Accordion>
     </Box>
+  )
+}
+
+const Heading = ({ icon, text }) => {
+  return (
+    <Flex alignItems="center">
+      <Icon as={icon} w={4} h={4} />
+      <Text
+        fontSize={{ base: 'sm', sm: 'md' }}
+        fontWeight="500"
+        textTransform="uppercase"
+        ml={1}
+      >
+        {text}
+      </Text>
+    </Flex>
   )
 }
 
