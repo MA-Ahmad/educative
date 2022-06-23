@@ -35,11 +35,13 @@ const tabsList = [
 const TabsSection = () => {
   return (
     <Tabs>
-      <TabList flexDirection={{ base: 'column', sm: 'row' }}>
+      <TabList overflowY={{ base: 'scroll', md: 'inherit' }}>
         {tabsList.map((tab, index) => (
           <Tab key={index}>
             <Icon as={tab.icon} w={4} h={4} />
-            <chakra.span ml={2}>{tab.heading}</chakra.span>
+            <chakra.span ml={2} whiteSpace="nowrap">
+              {tab.heading}
+            </chakra.span>
           </Tab>
         ))}
       </TabList>
