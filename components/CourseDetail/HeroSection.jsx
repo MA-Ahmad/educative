@@ -145,6 +145,17 @@ const HeroSection = ({ course }) => {
                 'https://die54k.fra1.a.restack.io/assets/d05a08aa-f0ec-40a2-8ebe-c4d49a779a05'
               }
             />
+            <Text
+              fontSize={{ base: 'xs', md: 'sm', lg: 'lg' }}
+              position="absolute"
+              left="50%"
+              bottom={{ base: '5%', sm: '2%' }}
+              zIndex={55}
+              transform="translateX(-46%) translateY(-50%)"
+              color="white"
+            >
+              Preview the Course
+            </Text>
           </Box>
         </Stack>
       </Stack>
