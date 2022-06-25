@@ -5,10 +5,14 @@ function PageLayout({ children }) {
     <Box
       maxW="7xl"
       mx="auto"
-      p={{
+      px={{
         base: 4,
         md: 8,
-        lg: 12,
+        lg: 10,
+      }}
+      py={{
+        base: 4,
+        md: 8,
       }}
     >
       {children}

@@ -5,9 +5,9 @@ import { lessons } from '../../../data/courses'
 
 const VideoSection = () => {
   return (
-    <Flex direction={{ base: 'column', md: 'row' }} mb={5}>
+    <Flex direction={{ base: 'column', lg: 'row' }} mb={1}>
       {/* Left Video Panel */}
-      <AspectRatio w={{ base: '100%', md: '60%' }} ratio={16 / 9}>
+      <AspectRatio w={{ base: '100%', lg: '70%' }} ratio={18 / 9}>
         <iframe
           title="naruto"
           src="https://www.youtube.com/embed/QhBnZ6NPOY0"
@@ -19,7 +19,7 @@ const VideoSection = () => {
       <Stack
         mt={{ base: 5, md: 0 }}
         ml={{ base: 0, md: 5 }}
-        w={{ base: '100%', md: '40%' }}
+        w={{ base: '100%', lg: '30%' }}
       >
         <LessonsSection lessons={lessons} />
       </Stack>

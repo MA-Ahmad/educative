@@ -42,12 +42,13 @@ const LessonsSection = ({ lessons }) => {
             <h2>
               <AccordionButton>
                 <AccordionIcon />
-                <Box flex="1" textAlign="left" fontWeight="bold">
+                <Box flex="1" textAlign="left" fontWeight="bold" fontSize="sm">
                   {lesson.title}
                 </Box>
                 <Stack
                   direction={{ base: 'column', sm: 'row' }}
                   alignItems="center"
+                  fontSize="sm"
                 >
                   <chakra.span>
                     {lesson.content.length}{' '}
@@ -80,7 +81,7 @@ const LessonsSection = ({ lessons }) => {
                       cursor="pointer"
                       onClick={() => setSelectedId(content.id)}
                     >
-                      <chakra.h2 fontSize="lg" fontWeight="500">
+                      <chakra.h2 fontSize="md" fontWeight="500">
                         {index + 1}) {content.title}
                       </chakra.h2>
                     </HStack>
@@ -100,12 +101,7 @@ const Heading = ({ icon, text }) => {
   return (
     <Flex alignItems="center">
       <Icon as={icon} w={4} h={4} />
-      <Text
-        fontSize={{ base: 'sm', sm: 'md' }}
-        fontWeight="500"
-        textTransform="uppercase"
-        ml={1}
-      >
+      <Text fontSize="xs" fontWeight="500" textTransform="uppercase" ml={1}>
         {text}
       </Text>
     </Flex>
