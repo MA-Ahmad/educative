@@ -5,7 +5,7 @@ import { lessons } from '../../../data/courses'
 
 const VideoSection = () => {
   return (
-    <Flex direction={{ base: 'column', lg: 'row' }} mb={1}>
+    <Flex direction={{ base: 'column', lg: 'row' }} mb={{ base: 5, md: 1 }}>
       {/* Left Video Panel */}
       <AspectRatio w={{ base: '100%', lg: '70%' }} ratio={18 / 9}>
         <iframe
