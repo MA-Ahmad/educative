@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Box,
-  Link,
-  Stack,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-} from '@chakra-ui/react'
+import { Text, Box, Link, Stack, Icon, HStack } from '@chakra-ui/react'
 import { BiChevronRight } from 'react-icons/bi'
 import HeroSection from './HeroSection'
 import LessonsSection from './LessonsSection'
@@ -24,6 +17,7 @@ import {
   ratingSummary,
   overviewDescription,
 } from '../../data/courses'
+import TrainerProfile from './TrainerProfile'
 
 const Main = () => {
   return (
@@ -35,6 +29,7 @@ const Main = () => {
         <FeaturesSection features={features} />
         <SkillsSection skills={skills} />
         <OverviewSection description={overviewDescription} />
+        <TrainerProfile />
         <ReviewsSection reviewData={reviewData} ratingSummary={ratingSummary} />
       </Stack>
     </Box>
@@ -43,21 +38,18 @@ const Main = () => {
 
 const BreadcrumbSection = () => {
   return (
-    <Breadcrumb spacing="8px" separator={<BiChevronRight color="gray.500" />}>
-      <BreadcrumbItem>
-        <NextLink
-          href={{
-            pathname: '/',
-          }}
-          passHref
-        >
-          <BreadcrumbLink as={Link}>Home</BreadcrumbLink>
-        </NextLink>
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <BreadcrumbLink href="#">react_js</BreadcrumbLink>
-      </BreadcrumbItem>
-    </Breadcrumb>
+    <HStack alignItems="center">
+      <NextLink
+        href={{
+          pathname: '/',
+        }}
+        passHref
+      >
+        <Link>Home</Link>
+      </NextLink>
+      <Icon as={BiChevronRight} mt="2px !important" />
+      <Text>react_js</Text>
+    </HStack>
   )
 }
 
