@@ -32,7 +32,7 @@ const BarItem = ({ icon, text }) => {
   return (
     <HStack spacing={3}>
       <Icon as={icon} w={5} h={5} />
-      <chakra.h3 fontSize="lg" fontWeight="bold">
+      <chakra.h3 fontSize="md" fontWeight="bold">
         {text}
       </chakra.h3>
     </HStack>
