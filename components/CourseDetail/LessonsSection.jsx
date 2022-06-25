@@ -42,7 +42,13 @@ const LessonsSection = ({ lessons }) => {
         </chakra.h3>
       </Stack>
 
-      <Accordion defaultIndex={[0]} allowMultiple>
+      <Accordion
+        defaultIndex={[0]}
+        allowMultiple
+        borderWidth="0 1px 0 1px"
+        borderStyle="solid"
+        borderColor="gray.200"
+      >
         {lessons.map((lesson, index) => (
           <AccordionItem key={index}>
             <h2>
