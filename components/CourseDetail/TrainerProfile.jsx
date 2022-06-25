@@ -63,7 +63,7 @@ export default function TrainerProfile() {
         direction={{ base: 'column', md: 'row' }}
         w="full"
         bg={useColorModeValue('white', 'gray.900')}
-        boxShadow="2xl"
+        boxShadow="lg"
         rounded="lg"
         p={{ base: 4, md: 6 }}
         textAlign="center"
@@ -72,7 +72,7 @@ export default function TrainerProfile() {
           <Avatar
             size="xl"
             src={
-              'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+              'https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixlib=rb-1.2.1&w=200&h=200&q=80&fm=jpg&crop=entropy&cs=tinysrgb'
             }
             alt="Avatar Alt"
             mb={2}

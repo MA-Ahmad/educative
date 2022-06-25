@@ -128,7 +128,7 @@ export const features = [
 export const reviewData = [
   {
     avatarSrc:
-      'https://s.gravatar.com/avatar/4f9135f54df98fe894a9f9979d600a87?s=80',
+      'https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixlib=rb-1.2.1&w=200&h=200&q=80&fm=jpg&crop=entropy&cs=tinysrgb',
     review: `What a wonderful little cottage! More spacious and adorable than the What a wonderful little cottage! More spacious and adorable than the
             pictures show. We never met our hosts and...`,
     stars: 3,

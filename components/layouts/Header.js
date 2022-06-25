@@ -2,6 +2,7 @@ import {
   Box,
   Flex,
   Text,
+  Link,
   Button,
   Stack,
   Input,
@@ -11,6 +12,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
 } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import ColorModeSwitcher from './ColorModeSwitcher'
 
@@ -57,13 +59,21 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 'inherit' }}
           justify={{ base: 'center', md: 'start' }}
         >
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}
+          <NextLink
+            href={{
+              pathname: '/',
+            }}
+            passHref
           >
-            Logo
-          </Text>
+            <Text
+              as={Link}
+              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+              fontFamily={'heading'}
+              color={useColorModeValue('gray.800', 'white')}
+            >
+              Logo
+            </Text>
+          </NextLink>
         </Flex>
 
         {/* Search Input field */}
