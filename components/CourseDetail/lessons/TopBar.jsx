@@ -17,7 +17,8 @@ const TopBar = () => {
       direction={{ base: 'column', sm: 'row' }}
       spacing={5}
       alignItems={{ base: 'flex-start', sm: 'center' }}
-      mb={4}
+      justifyContent="center"
+      mb={6}
       flexWrap="wrap"
       divider={<VerticalDivider display={{ base: 'none', sm: 'block' }} />}
     >
