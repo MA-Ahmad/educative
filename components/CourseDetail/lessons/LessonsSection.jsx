@@ -36,7 +36,7 @@ const LessonsSection = ({ lessons }) => {
         </Stack>
       </Box>
 
-      <Accordion defaultIndex={[0]} allowMultiple>
+      <Accordion defaultIndex={[0]} allowMultiple h="25rem" overflowY="scroll">
         {lessons.map((lesson, index) => (
           <AccordionItem key={index}>
             <h2>
