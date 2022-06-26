@@ -28,7 +28,12 @@ const CourseCard = (props) => {
   const textColor = useColorModeValue('gray.600', 'gray.400')
 
   return (
-    <Stack spacing={3} {...rootProps} maxW={{ base: 'auto', md: '17rem' }}>
+    <Stack
+      spacing={3}
+      {...rootProps}
+      w={{ base: 'auto', md: '17rem' }}
+      h={{ base: 'auto', md: '21.5rem' }}
+    >
       <Box position="relative">
         <AspectRatio ratio={4 / 2}>
           <Image
@@ -58,7 +63,12 @@ const CourseCard = (props) => {
 
       {/* Course name and Price  */}
       <Stack spacing={2}>
-        <Stack spacing="1" direction="row" justify="space-between">
+        <Stack
+          direction="row"
+          justify="space-between"
+          alignItems="center"
+          height="2.6rem"
+        >
           <Text
             fontWeight="medium"
             fontSize="sm"
