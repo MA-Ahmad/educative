@@ -10,9 +10,13 @@ function PageLayout({ children }) {
         md: 8,
         lg: 10,
       }}
-      py={{
+      pt={{
         base: 4,
         md: 8,
+      }}
+      pb={{
+        base: 10,
+        md: 16,
       }}
     >
       {children}
