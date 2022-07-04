@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Box,
   Flex,
@@ -6,6 +7,7 @@ import {
   Button,
   Stack,
   Input,
+  Avatar,
   Collapse,
   IconButton,
   useDisclosure,
@@ -16,8 +18,9 @@ import NextLink from 'next/link'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import ColorModeSwitcher from './ColorModeSwitcher'
 
-export default function WithSubnavigation() {
+export default function Header() {
   const { isOpen, onToggle } = useDisclosure()
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
 
   return (
     <Box
@@ -89,32 +92,15 @@ export default function WithSubnavigation() {
         />
 
         {/* Buttons */}
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} alignItems="center">
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
+            alignItems="center"
             direction={'row'}
             spacing={3}
           >
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              href={'#'}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Sign In
-            </Button>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              href={'#'}
-              colorScheme="teal"
-            >
-              Sign Up
-            </Button>
+            {isLoggedIn ? <LoggedInSection /> : <SignupSection />}
           </Stack>
           {/* Color Mode Switcher */}
           <ColorModeSwitcher />
@@ -126,6 +112,50 @@ export default function WithSubnavigation() {
         <MobileNav />
       </Collapse>
     </Box>
+  )
+}
+
+const SignupSection = () => {
+  return (
+    <>
+      <Button
+        display={{ base: 'none', md: 'inline-flex' }}
+        fontSize={'sm'}
+        fontWeight={600}
+        href={'#'}
+        colorScheme="teal"
+        variant="outline"
+      >
+        Sign In
+      </Button>
+      <Button
+        display={{ base: 'none', md: 'inline-flex' }}
+        fontSize={'sm'}
+        fontWeight={600}
+        href={'#'}
+        colorScheme="teal"
+      >
+        Sign Up
+      </Button>
+    </>
+  )
+}
+
+const LoggedInSection = () => {
+  return (
+    <>
+      <Button
+        display={{ base: 'none', md: 'inline-flex' }}
+        fontSize={'sm'}
+        fontWeight={600}
+        href={'#'}
+        colorScheme="teal"
+        variant="outline"
+      >
+        Enrollment
+      </Button>
+      <Avatar size="md" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+    </>
   )
 }
 
