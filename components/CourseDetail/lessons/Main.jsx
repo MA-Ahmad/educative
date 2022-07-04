@@ -1,16 +1,16 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import TopBar from './TopBar'
 import VideoSection from './VideoSection'
 import TabsSection from './TabsSection'
 
 const Main = () => {
   return (
-    <Box>
+    <Container maxWidth="6xl">
       <TopBar />
       <VideoSection />
       <TabsSection />
-    </Box>
+    </Container>
   )
 }
 
