@@ -77,13 +77,16 @@ const LessonsSection = ({ lessons }) => {
                         selectedId === content.id ? 'teal.400' : 'transparent'
                       }
                       w="90%"
-                      p={3}
+                      p={2}
                       cursor="pointer"
                       onClick={() => setSelectedId(content.id)}
                     >
-                      <chakra.h2 fontSize="md" fontWeight="500">
-                        {index + 1}) {content.title}
-                      </chakra.h2>
+                      <Flex direction="column">
+                        <chakra.h2 fontSize="md" fontWeight="500">
+                          {index + 1}) {content.title}
+                        </chakra.h2>
+                        <chakra.span pl={4}>{content.duration}</chakra.span>
+                      </Flex>
                     </HStack>
                     <Checkbox colorScheme="teal" />
                   </Flex>
