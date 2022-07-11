@@ -15,8 +15,8 @@ import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { SiMessenger } from 'react-icons/si'
 
 const userProfile = {
-  name: 'Venkata Penumatsa',
-  username: '@venkata',
+  name: 'Muhammad Ahmad',
+  username: '@ahmad',
   desciption:
     'Actress, musician, songwriter and artist. PM for work inquires or Actress, musician, songwriter and artist. PM for work inquires or',
   accounts: [
