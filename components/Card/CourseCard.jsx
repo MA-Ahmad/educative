@@ -56,7 +56,7 @@ const CourseCard = (props) => {
           rounded="md"
         >
           <Text fontSize="xs" lineHeight={1}>
-            ABCD
+            Free
           </Text>
         </Box>
       </Box>
