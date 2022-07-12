@@ -20,7 +20,7 @@ import ColorModeSwitcher from './ColorModeSwitcher'
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure()
-  const [isLoggedIn, setIsLoggedIn] = useState(true)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
     <Box
